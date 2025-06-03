@@ -39,6 +39,8 @@ Create ` config.json ` file and set permission settings:
 | ------ | ------ | ------ | ------ |
 | **top** | Shows Top 10 user | stable |
 | **me** | Shows points | stable |
+| **sesgir** | Bot voice connected | stable |
+| **sescik** | Bot voice disconnected | stable |
 
 ### events:
 | name | comment | situation |
