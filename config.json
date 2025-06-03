@@ -1,11 +1,11 @@
 {
 	"isRandomPfp": true,
-	"randomPfpChannel": "1379430883085516880",
+	"randomPfpChannel": "",
 	
 	"pointBlockedChannels": [],
 	"pointBlockedCategories": [],
 	
 	"allowedUsers": [],
 	"allowedCategoryIds": [],
-	"allowedChannelIds": ["944962537227698196"]
+	"allowedChannelIds": []
 }
