@@ -7,7 +7,7 @@ export default {
     async execute(client, message) {
         if (message.author.bot) return;
 
-        if (config.blockedChannels.includes(message.channel.id)) return;
+        if (config.pointBlockedChannels.includes(message.channel.id)) return;
 
         const hasImage = message.attachments.some(att => att.contentType?.startsWith('image'))
             || message.embeds.some(embed => embed.image);
