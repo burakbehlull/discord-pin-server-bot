@@ -4,7 +4,7 @@ import { messageSender } from "#helpers"
 export default {
   name: 'sescik',
   description: 'Bot ses kanalından çıkar',
-  async execute(message) {
+  async execute(client, message) {
 	const sender = new messageSender(message)
 	
     const connection = getVoiceConnection(message.guild.id);

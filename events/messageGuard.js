@@ -9,7 +9,7 @@ export default {
 	const sender = new messageSender(message)
 	
     if (message.author.bot) return;
-    if (!message.guild || message.channel.type !== 0) return; 
+    if (message.channel.type !== 0) return; 
 
     const channelId = message.channel.id;
     const parentId = message.channel.parentId;
