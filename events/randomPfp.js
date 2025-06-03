@@ -1,9 +1,11 @@
 import { Events, EmbedBuilder } from 'discord.js'
-const { randomPfpChannel, isRandomPfp } from '../config.json'
+import config from '../config.json' assert { type: 'json' };
+
+const { randomPfpChannel, isRandomPfp } = config
 
 export default {
     name: Events.UserUpdate,
-    async execute(oldUser, newUser, interaction) {
+    async execute(interaction, oldUser, newUser) {
         try {
 			if(!isRandomPfp) return
 			
@@ -24,9 +26,17 @@ export default {
                 avatar.replace('webp', 'png')
             }
 
+			
+			const guild = channel.guild;
+			
             const embed = new EmbedBuilder()
-            .setTitle(`${user.globalName}`)
+            .setTitle(`**${user.globalName}** | ${user.username}`)
             .setImage(avatar)
+			.setTimestamp()
+			.setFooter({
+				text: guild.name,
+				iconURL: guild.iconURL({ dynamic: true })
+			})
             
             await channel.send({embeds: [embed]})
         } catch (error) {
