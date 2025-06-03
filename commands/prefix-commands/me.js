@@ -11,9 +11,8 @@ export default {
 	  const sender = new messageSender(message)
 	  
 
-      if (!userData) {
-        return message.reply('Henüz puanın yok.');
-      }
+      if (!userData) return sender.reply(sender.errorEmbed('Henüz puanın yok.'));
+      
 		
 	  // `${message.author.tag} - Puan`
 	  const IEmbed = sender.embed({
