@@ -36,7 +36,7 @@ Create ` config.json ` file and set permission settings:
 
 ### contents:
 | command | comment | situation |
-| ------ | ------ | ------ | ------ |
+| ------ | ------ | ------ |
 | **top** | Shows Top 10 user | stable |
 | **me** | Shows points | stable |
 | **sesgir** | Bot voice connected | stable |
@@ -44,7 +44,7 @@ Create ` config.json ` file and set permission settings:
 
 ### events:
 | name | comment | situation |
-| ------ | ------ | ------ | ------ |
+| ------ | ------ | ------ |
 | **Message Guard** | Prevents messages from being written to all channels except specified channels and categories. | stable |
 | **Random Pfp** | When users change their profile, they post it to the channel | stable |
 | **Point System** | Users earn points for every photo they post. | stable |
