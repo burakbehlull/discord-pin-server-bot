@@ -1,6 +1,7 @@
 import config from '../config.json' assert { type: 'json' };
 import { messageSender } from "#helpers"
-const { allowedCategoryIds, allowedChannelIds} = config
+
+const { allowedCategoryIds, allowedChannelIds, allowedUsers} = config
 
 export default {
   name: 'messageCreate',
@@ -12,11 +13,13 @@ export default {
 
     const channelId = message.channel.id;
     const parentId = message.channel.parentId;
+	const authorId = message.author.id;
 
+	const isAllowedUser = allowedUsers.includes(authorId);
     const isAllowedChannel = allowedChannelIds.includes(channelId);
     const isInAllowedCategory = allowedCategoryIds.includes(parentId);
 
-    if (!isAllowedChannel && !isInAllowedCategory) {
+    if (!isAllowedUser && !isAllowedChannel && !isInAllowedCategory) {
       try {
         await message.delete();
 
