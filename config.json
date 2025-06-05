@@ -1,11 +1,22 @@
 {
 	"isRandomPfp": true,
+	"isRandomBanner":true,
+	
 	"randomPfpChannel": "",
+	"randomBannerChannel": "",
 	
 	"pointBlockedChannels": [],
 	"pointBlockedCategories": [],
 	
 	"allowedUsers": [],
 	"allowedCategoryIds": [],
-	"allowedChannelIds": ["998638239843877024"]
+	"allowedChannelIds": ["998638239843877024"],
+	
+	"permissions": {
+        "isOwners": true,
+		"isRole": true,
+        "isAuthority": true,
+        "roles": [],
+        "owners": ["677194506621288448"]
+    }
 }

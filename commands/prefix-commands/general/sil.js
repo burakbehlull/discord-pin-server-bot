@@ -1,11 +1,19 @@
 import { messageSender } from '#helpers';
+import { PermissionsManager } from '#managers';
 
 export default {
   name: 'sil',
   description: 'Mesajları siler',
   usage: 'sil <1-100>',
+  aliases: ['clear'],
   async execute(client, message, args) {
 	const sender = new messageSender(message);
+	const PM = new PermissionsManager(message);
+	
+	
+	const ctrl = await PM.control(PM.flags.ManageEmojisAndStickers, PM.flags.Administrator)
+	if (!ctrl) return sender.reply(sender.errorEmbed("❌ Yetkin yok."));
+
 
     const deleteCount = parseInt(args[0]);
 

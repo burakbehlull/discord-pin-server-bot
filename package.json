@@ -9,7 +9,8 @@
   "imports": {
     "#libs": "./libs/index.js",
     "#helpers": "./helpers/index.js",
-    "#models": "./models/index.js"
+    "#models": "./models/index.js",
+    "#managers": "./managers/index.js"
   },
   "scripts": {
     "start": "node bot.js",
