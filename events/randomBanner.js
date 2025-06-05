@@ -5,7 +5,7 @@ const { randomBannerChannel, isRandomBanner } = config;
 
 export default {
     name: Events.UserUpdate,
-    async execute(oldUser, newUser) {
+    async execute(interaction, oldUser, newUser) {
         try {
             if (!isRandomBanner) return;
 
